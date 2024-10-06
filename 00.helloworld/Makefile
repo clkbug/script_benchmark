@@ -1,6 +1,6 @@
-.PHONY: all cpython pypy scala fsharp
+.PHONY: all cpython pypy scala fsharp go
 
-all: cpython pypy scala fsharp
+all: cpython pypy scala fsharp go
 
 cpython: run.py
 	hyperfine 'python run.py'
@@ -12,3 +12,6 @@ scala: run.sc
 
 fsharp: run.fsx
 	hyperfine 'dotnet fsi run.fsx'
+
+go: run.go
+	hyperfine 'go run run.go'
