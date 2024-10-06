@@ -26,11 +26,11 @@ def generate_random_tsv(filepath, columns, rows):
 
 
 def main():
-    # for i in range(20, 32, 4):
-    #     generate_random_text(f"text_{2**i // 2**20:04}MiB.txt", 2 ** i)
+    for i in [30]:  # range(20, 32, 4):
+        generate_random_text(f"text_{2**i // 2**20:04}MiB.txt", 2 ** i)
 
-    n = 10 ** 7
-    generate_random_tsv(f"tsv_{n:010}line.tsv", columns=8, rows=n)
+    # n = 10 ** 7
+    # generate_random_tsv(f"tsv_{n:010}line.tsv", columns=8, rows=n)
 
 
 if __name__ == '__main__':
